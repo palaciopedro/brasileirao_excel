@@ -17,5 +17,7 @@ def get_standings():
             "Points": team["points"]
         })
     
-    return teams
+    teams_ordered = sorted(teams, key=lambda x: x["Name"])
+
+    return teams_ordered
 
